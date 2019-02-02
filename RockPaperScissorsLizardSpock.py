@@ -65,6 +65,13 @@ def chooseWinner(user, computer):
             result = "You won"
         else:
             result = "It's a tie"
+    elif user == "spock":
+        if computer == "lizard" or computer == "paper":
+            result = "You lost"
+        elif computer == "rock" or computer == "scissors":
+            result = "You won"
+        else:
+            result = "It's a tie"
     else:
         raise Exception("Should never reach here")
 
@@ -78,7 +85,7 @@ def theGame():
     print("\tLizard: 4")
     print("\tSpock: 5")
     print()
-    choice = int(input("Enter 1,2, or 3: "))
+    choice = int(input("Enter 1, 2, 3, 4, or 5: "))
     user = userChoice(choice)
     computer = computerChoice()
     chooseWinner(user, computer)
