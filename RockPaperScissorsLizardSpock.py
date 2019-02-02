@@ -36,25 +36,32 @@ def chooseWinner(user, computer):
     if user not in valid_choices or computer not in valid_choices:
         raise Exception("Invalid choice has been made")
     if user == "rock":
-        if computer == "paper":
+        if computer == "paper" or computer == "spock":
             result = "You lost"
-        elif computer == "scissors":
+        elif computer == "scissors" or computer == "lizard":
             result = "You won"
         else:
             result = "It's a tie"
 
     elif user == "paper":
-        if(computer == "scissors"):
+        if computer == "scissors" or computer == "lizard":
             result = "You lost"
-        elif computer == "rock":
+        elif computer == "rock" or computer == "spock":
             result = "You won"
         else:
             result = "It's a tie"
 
     elif user == "scissors":
-        if computer == "rock":
+        if computer == "rock" or computer == "spock":
             result = "You lost"
-        elif computer == "paper":
+        elif computer == "paper" or computer == "lizard":
+            result = "You won"
+        else:
+            result = "It's a tie"
+    elif user == "lizard":
+        if computer == "scissors" or computer == "rock":
+            result = "You lost"
+        elif computer == "spock" or computer == "paper":
             result = "You won"
         else:
             result = "It's a tie"
