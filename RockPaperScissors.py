@@ -65,5 +65,3 @@ def theGame():
     user = userChoice(choice)
     computer = computerChoice()
     chooseWinner(user, computer)
-
-theGame()
