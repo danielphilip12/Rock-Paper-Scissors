@@ -14,7 +14,7 @@ while True:
         RockPaperScissorsLizardSpock.theGame()
     else:
         print("Invalid number")
-
+        continue
     print("Would you like to play again?")
     again = str(input("Yes or No(Y or N): "))
     if again == "Y" or again == "y":
