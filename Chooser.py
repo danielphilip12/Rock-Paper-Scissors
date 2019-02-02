@@ -1,9 +1,7 @@
 import RockPaperScissors
 import RockPaperScissorsLizardSpock
 
-
-
-while(True):
+while True:
     print('Choose your game')
     print("")
     print("\tRock, Paper, Scissors: 1")
@@ -16,11 +14,10 @@ while(True):
         RockPaperScissorsLizardSpock.theGame()
     else:
         print("Invalid number")
-    
+
     print("Would you like to play again?")
     again = str(input("Yes or No(Y or N): "))
     if again == "Y" or again == "y":
         continue
     else:
         break
-    

@@ -1,7 +1,8 @@
 from random import randint
 
+
 def userChoice(choice):
-    if (choice == 1):
+    if choice == 1:
         return "rock"
     elif choice == 2:
         return "paper"
@@ -10,9 +11,10 @@ def userChoice(choice):
     else:
         raise Exception("Should not reach here")
 
+
 def computerChoice():
     choice = randint(1, 3)
-    if (choice == 1):
+    if choice == 1:
         return "rock"
     elif choice == 2:
         return "paper"
@@ -20,6 +22,7 @@ def computerChoice():
         return "scissors"
     else:
         raise Exception("Should not reach here")
+
 
 def chooseWinner(user, computer):
     user = user.lower()
@@ -36,7 +39,7 @@ def chooseWinner(user, computer):
             result = "It's a tie"
 
     elif user == "paper":
-        if(computer == "scissors"):
+        if computer == "scissors":
             result = "You lost"
         elif computer == "rock":
             result = "You won"
@@ -54,6 +57,7 @@ def chooseWinner(user, computer):
         raise Exception("Should never reach here")
 
     print(result)
+
 
 def theGame():
     print("Welcome to rock paper scissors")
